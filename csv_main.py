@@ -60,6 +60,10 @@ def learning_panda():
 
     # Write the DataFrame to a CSV file
     df.to_csv("resources/files/panda-saving-example.csv", index=False)
+    # Append the new data to an existing CSV file
+
+    df = pd.DataFrame({'Name': ['Jessica'], 'Age': [22]})
+    df.to_csv("resources/files/panda-saving-example.csv", mode='a', header=False, index=False)
 
 
 def divider(title: str):
